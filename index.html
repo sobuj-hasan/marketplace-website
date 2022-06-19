@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <html lang="ar" dir="rtl"> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace Website</title>
+    <!--    GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!--    BOOSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css">-->
+    <!--    FONT AWSOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!--    SLICK SLIDER-->
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!--    MAIN CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- <link rel="stylesheet" href="css/arabic.css"> -->
+</head>
+
+<body>
+
+    <!--    HEADER SECTION-->
+    <header class="d-flex align-items-center">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-2">
+                    <div class="logo d-flex justify-content-between align-items-center">
+                        <a href="#">
+                            <img src="assets/img/logo/logo.png" alt="Logo">
+                        </a>
+                        <i class="fa fa-bars d-md-none" onClick="mobileClick()" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-md-7 d-none d-md-block">
+                    <div class="d-flex justify-content-center">
+                        <div class="input-group">
+                            <button class="btn btn-outline-secondary dropdown-toggle custom-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">All</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Category One</a></li>
+                                <li><a class="dropdown-item" href="#">Category Two</a></li>
+                                <li><a class="dropdown-item" href="#">Categroy Three</a></li>
+                                <li><a class="dropdown-item" href="#">Category Four</a></li>
+                            </ul>
+                            <input type="text" class="form-control custom-control" aria-label="Text input with 2 dropdown buttons">
+                            <button class="search-btn" type="submit">
+                                <img src="assets/img/icon/search.png" alt="search">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-none d-md-block">
+                    <div class="account d-flex justify-content-center">
+                        <div class="input-group">
+                            <button class="language-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Arabic &nbsp; <i class="fa-solid fa-sort-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Arabic</a></li>
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                            </ul>
+                        </div>
+                        <div class="input-group">
+                            <button class="language-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="img-fluid" src="assets/img/icon/user.png" alt="user"> &nbsp; Signup &nbsp; <i class="fa-solid fa-sort-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Create Account</a></li>
+                                <li><a class="dropdown-item" href="#">Sign In</a></li>
+                            </ul>
+                        </div>
+                        <div class="cart-icon d-flex">
+                            <img src="assets/img/icon/shopping-bag.png" alt="cart-icon">
+                            <sub>01</sub>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="d-flex">
+        <div class="container-fluid">
+            <div class="row align-items-start">
+                <div class="col-12 d-none d-md-block">
+                    <div class="menubar">
+                        <ul class="text-start">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Shop Now</a></li>
+                            <li><a href="#">International Designer</a></li>
+                            <li><a href="#">Training</a></li>
+                            <li><a href="#">Even Organization</a></li>
+                            <li><a href="#">Exhibition Catelogues</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="category-section">
+        <div class="container-fluid">
+            <div class="row align-items-start">
+                <div class="col-12 d-none d-md-block">
+                    <div class="menubar">
+                        <ul class="text-start">
+                            <li>
+                                <a href="#"><i class="fa-solid fa-bars"></i> &nbsp; All</a>
+                            </li>
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#">Fashion</a>
+                            </li>
+                            <li>
+                                <a href="#">Man's</a>
+                            </li>
+                            <li>
+                                <a href="#">Women</a>
+                            </li>
+                            <li>
+                                <a href="#">Kids</a>
+                            </li>
+                            <li>
+                                <a href="#">Baby</a>
+                            </li>
+                            <li>
+                                <a href="#">Hygens</a>
+                            </li>
+                            <li>
+                                <a href="#">Dress</a>
+                            </li>
+                            <li>
+                                <a href="#">Shoes</a>
+                            </li>
+                            <li>
+                                <a href="#">Accessory</a>
+                            </li>
+                            <li>
+                                <a href="#">Bags</a>
+                            </li>
+                            <li>
+                                <a href="#">Sportswear</a>
+                            </li>
+                            <li>
+                                <a href="#">Coat</a>
+                            </li>
+                            <li>
+                                <a href="#">Weddings</a>
+                            </li>
+                            <li>
+                                <a href="#">Parties</a>
+                            </li>
+                            <li>
+                                <a href="#">Suitcase</a>
+                            </li>
+                            <li>
+                                <a href="#">Cosmetics</a>
+                            </li>
+                            <li>
+                                <a href="#">Perfume</a>
+                            </li>
+                            <li>
+                                <a href="#">Gift</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- HEADER SECTION END -->
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="mobile-menu">
+        <!-- accordion-->
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+
+            <div class="mobile-logo mb-5">
+                <a href="#">
+                    <img src="assets/img/logo/logo.png" alt="mobile-logo">
+                </a>
+                <i id="mobile-cross" class="fa fa-times" onClick="mobileClick()"></i>
+            </div>
+
+            <div class="accordion-item custom ">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <a href="#">
+                        <button class="accordion-button custom collapsed none" type="button">
+                            Home
+                        </button>
+                    </a>
+                </h2>
+            </div>
+            <div class="accordion-item custom">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <a href="#">
+                        <button class="accordion-button custom collapsed none" type="button">
+                            About
+                        </button>
+                    </a>
+                </h2>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button custom collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#two" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Services
+                    </button>
+                </h2>
+                <div id="two" class="accordion-collapse collapse" aria-labelledby="two" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body custom">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-chevron-right"></i>services</a></li>
+
+                            <li><a href="#"><i class="fa fa-chevron-right"></i>sector</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="mobileOverlay" class="mobile-overlay" onClick="mobileClick()"></div>
+    <!--   END MOBILE MENU-->
+
+
+
+    <!--    JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--    SLICK SLIDER-->
+    <script src="assets/js/slick.min.js"></script>
+    <!--    BOOSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
