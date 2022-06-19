@@ -341,7 +341,7 @@ nav {
     background-color: var(--bgc);
 }
 
-.banner-img {
+.banner-img-two {
     background-image: url('../img/images/banner2.png');
     background-repeat: no-repeat;
     background-size: cover;
