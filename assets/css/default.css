@@ -6,10 +6,11 @@
     --wc: #FFFFFF;
     --clc: #F5F5F5;
     --pc: #6A1B9A;
+    --bgc: #EEEEEE;
+    --gc: #424242;
+    --xgc: #757575;
+    --ggc: #616161;
 
-
-    
-    
 
 }
 
@@ -19,7 +20,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 14px;
     color: var(--pc);
