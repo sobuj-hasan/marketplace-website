@@ -90,6 +90,7 @@ nav {
     font-weight: 400;
     font-size: 14px;
     color: var(--lc);
+    border: none;
 }
 
 .language-dropdown i {
@@ -295,14 +296,6 @@ nav {
     background-color: var(--bgc);
 }
 
-.banner-img {
-    background-image: url('../img/images/banner1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 275px;
-}
-
 /* Category shop part start */
 .category-shop {
     background: var(--bgc);
@@ -362,14 +355,6 @@ nav {
 /* Banner two part start */
 .banner-two {
     background-color: var(--bgc);
-}
-
-.banner-img-two {
-    background-image: url('../img/images/banner2.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 275px;
 }
 
 /* Banner two part end */

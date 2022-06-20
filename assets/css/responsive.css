@@ -1,30 +1,126 @@
-@media only screen and (max-width:991px) {}
+@media only screen and (min-width: 1199px) and (max-width: 1199px) {}
 
+@media only screen and (max-width: 1199px) {
+    .category-item h4 {
+        font-weight: 600;
+        font-size: 15px;
+    }
+    
+}
 
-@media only screen and (max-width:767px) {
+@media only screen and (max-width: 991px) {
     header {
         height: 65px;
     }
+
     .logo img {
         width: 215px;
     }
-    .login-left {
-        height: 390px;
+
+    .logo img {
+        width: 150px;
     }
+
+    .banner img {
+        min-height: 140px;
+    }
+
+    .category-item h4 {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .category-box {
+        width: 50%;
+    }
+
+    .collection-part h3 {
+        font-size: 22px;
+    }
+
+    .shop-category-section h5 {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .shop-box p {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 14px;
+    }
+
 
 }
 
-@media only screen and (max-width:575px) {
+@media only screen and (max-width: 767px) {}
+
+
+@media only screen and (max-width: 576px) {
     body {
         font-size: 13px;
     }
-    .custom-btn {
-        font-size: 18px;
-        padding: 12px 25px;
-        letter-spacing: 3px;
+
+    .logo img {
+        width: 150px;
     }
-    .section-title h2 {
-        font-size: 20px;
-        line-height: 30px;
+
+    .banner img {
+        min-height: 100px;
     }
+
+    .category-item h4 {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .category-box{
+        width: 50%;
+    }
+
+    .collection-part h3 {
+        font-size: 22px;
+    }
+
+    .shop-category-section h5 {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .shop-box p {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 14px;
+    }
+
+
 }
+
+@media only screen and (max-width: 400px) {
+    .logo img {
+        width: 150px;
+    }
+    .banner img {
+        min-height: 100px;
+    }
+    .category-item h4 {
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .collection-part h3 {
+        font-size: 22px;
+    }
+    .shop-category-section h5 {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .shop-box p {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 14px;
+    }
+
+}
+
+
+
