@@ -310,6 +310,7 @@ nav {
 
 .category-item {
     background: var(--wc);
+    height: 100%;
 }
 
 .category-item img {
@@ -477,7 +478,24 @@ footer {
     font-weight: 400;
     padding: 18px 0;
 }
-
+.shop-category-section h3{
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--gc);
+}
+.shop-category-section h5{
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--gc);
+}
+.discount span{
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--lc);
+    background: #D32F2F;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
 /*copyright part end*/
 
 /*=========== HOME PAGE CSS END ============*/
@@ -649,6 +667,10 @@ footer {
 
 .shop-box:hover .shop-image-overlay {
     opacity: 1;
+}
+
+.brand-fashion .brand-item{
+    background: var(--wc);
 }
 
 /* SHOP PAGE CSS END */

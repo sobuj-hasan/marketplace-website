@@ -5,11 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketplace Website</title>
+    <title>Shop | Marketplace Website</title>
     <!--    GOOGLE FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <!--    BOOSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css">-->
@@ -27,18 +28,18 @@
 <body>
 
     <!--    HEADER SECTION-->
-    <header class="d-flex align-items-center">
+    <header class="d-flex align-items-center px-3">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-12 col-md-2">
-                    <div class="logo d-flex justify-content-between align-items-center">
+                <div class="col-12 col-md-3">
+                    <div class="logo d-flex justify-content-between align-items-center text-white">
                         <a href="#">
                             <img src="assets/img/logo/logo.png" alt="Logo">
                         </a>
                         <i class="fa fa-bars d-md-none" onClick="mobileClick()" aria-hidden="true"></i>
                     </div>
                 </div>
-                <div class="col-md-7 d-none d-md-block">
+                <div class="col-md-6 d-none d-md-block">
                     <div class="d-flex justify-content-center">
                         <div class="input-group">
                             <button class="btn btn-outline-secondary dropdown-toggle custom-dropdown" type="button"
@@ -59,20 +60,36 @@
                 </div>
                 <div class="col-md-3 d-none d-md-block">
                     <div class="account d-flex justify-content-center">
-                        <div class="input-group">
-                            <button class="language-dropdown" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Arabic &nbsp; <i class="fa-solid fa-sort-down"></i>
+                        <div class="btn-group" data-aos="fade">
+                            <button class="btn btn-sm dropdown-toggle bg-transparent text-white" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img height="15px"
+                                    src="https://amlakin.com/assets/admin/fonts/flag-icon-css/flags/4x3/us.svg" alt="">
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Arabic</a></li>
-                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li class="ps-2 py-2 d-flex align-items-center">
+                                    <img height="15px"
+                                        src="https://amlakin.com/assets/admin/fonts/flag-icon-css/flags/4x3/us.svg"
+                                        alt="">
+                                    <a class="text-dark w-100 ps-2"
+                                        href="{{ request()->fullUrlWithQuery(['lang' => 'en']) }}"> English
+                                    </a>
+                                </li>
+                                <li class="ps-2 py-2 d-flex align-items-center">
+                                    <img height="15px"
+                                        src="https://amlakin.com/assets/admin/fonts/flag-icon-css/flags/4x3/sa.svg"
+                                        alt="">
+                                    <a class="text-dark w-100 ps-2"
+                                        href="{{ request()->fullUrlWithQuery(['lang' => 'ar']) }}">
+                                        Arabic </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="input-group">
-                            <button class="language-dropdown" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <img class="img-fluid" src="assets/img/icon/user.png" alt="user"> &nbsp; Signup &nbsp;
+                            <button class="align-items-center d-flex gap-2 language-dropdown ms-lg-3" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="img-fluid" src="assets/img/icon/user.png" alt="user"> <span
+                                    class="d-none d-lg-block">Signup</span>
                                 <i class="fa-solid fa-sort-down"></i>
                             </button>
                             <ul class="dropdown-menu">
@@ -80,91 +97,98 @@
                                 <li><a class="dropdown-item" href="#">Sign In</a></li>
                             </ul>
                         </div>
-                        <div class="cart-icon d-flex">
+                        <div class="cart-icon" style="position: relative;">
                             <img src="assets/img/icon/shopping-bag.png" alt="cart-icon">
-                            <sub>01</sub>
+                            <span
+                                style="position: absolute;color: #084298;background: #ffc107;border-radius: 50%;padding: 4px;line-height: 1;font-size: 8pt;right: -10px;top: -5px;border: 1px solid #0f5132;">01</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <nav class="d-flex">
+    <nav class="d-none d-lg-flex">
         <div class="container-fluid">
-            <div class="row align-items-start">
-                <div class="col-12 d-none d-md-block">
-                    <div class="menubar">
-                        <ul class="text-start">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Shop Now</a></li>
-                            <li><a href="#">International Designer</a></li>
-                            <li><a href="#">Training</a></li>
-                            <li><a href="#">Even Organization</a></li>
-                            <li><a href="#">Exhibition Catelogues</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="menubar">
+                <ul class="align-items-center d-flex justify-content-start py-3 text-truncate">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Shop Now</a></li>
+                    <li><a href="#">International Designer</a></li>
+                    <li><a href="#">Training</a></li>
+                    <li><a href="#">Even Organization</a></li>
+                    <li><a href="#">Exhibition Catelogues</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
             </div>
         </div>
     </nav>
-    <section class="category-section">
+    <section class="category-section d-none d-lg-block">
         <div class="container-fluid">
-            <div class="row align-items-start">
-                <div class="col-12 d-none d-md-block">
-                    <div class="menubar">
-                        <ul class="text-start">
-                            <li>
-                                <a href="#"><i class="fa-solid fa-bars"></i> &nbsp; All</a>
-                            </li>
-                            <li>
-                                <a href="#">About Us</a>
-                            </li>
-                            <li>
-                                <a href="#">Fashion</a>
-                            </li>
-                            <li>
-                                <a href="#">Man's</a>
-                            </li>
-                            <li>
-                                <a href="#">Women</a>
-                            </li>
-                            <li>
-                                <a href="#">Kids</a>
-                            </li>
-                            <li>
-                                <a href="#">Baby</a>
-                            </li>
-                            <li>
-                                <a href="#">Hygens</a>
-                            </li>
-                            <li>
-                                <a href="#">Dress</a>
-                            </li>
-                            <li>
-                                <a href="#">Shoes</a>
-                            </li>
-                            <li>
-                                <a href="#">Accessory</a>
-                            </li>
-                            <li>
-                                <a href="#">Bags</a>
-                            </li>
-                            <li>
-                                <a href="#">Sportswear</a>
-                            </li>
-                            <li>
-                                <a href="#">Coat</a>
-                            </li>
-                            <li>
-                                <a href="#">Weddings</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
+            <div class="menubar">
+                <ul class="align-items-center d-flex justify-content-start py-3 text-truncate">
+                    <li>
+                        <a href="#"><i class="fa-solid fa-bars"></i> &nbsp; All</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Fashion</a>
+                    </li>
+                    <li>
+                        <a href="#">Man's</a>
+                    </li>
+                    <li>
+                        <a href="#">Women</a>
+                    </li>
+                    <li>
+                        <a href="#">Kids</a>
+                    </li>
+                    <li>
+                        <a href="#">Baby</a>
+                    </li>
+                    <li>
+                        <a href="#">Hygens</a>
+                    </li>
+                    <li>
+                        <a href="#">Dress</a>
+                    </li>
+                    <li>
+                        <a href="#">Shoes</a>
+                    </li>
+                    <li>
+                        <a href="#">Accessory</a>
+                    </li>
+                    <li>
+                        <a href="#">Bags</a>
+                    </li>
+                    <li>
+                        <a href="#">Sportswear</a>
+                    </li>
+                    <li>
+                        <a href="#">Coat</a>
+                    </li>
+                    <li>
+                        <a href="#">Weddings</a>
+                    </li>
+                    <li>
+                        <a href="#">Parties</a>
+                    </li>
+                    <li>
+                        <a href="#">Suitcase</a>
+                    </li>
+                    <li>
+                        <a href="#">Cosmetics</a>
+                    </li>
+                    <li>
+                        <a href="#">Perfume</a>
+                    </li>
+                    <li>
+                        <a href="#">Gift</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -225,7 +249,7 @@
     <div id="mobileOverlay" class="mobile-overlay" onClick="mobileClick()"></div>
     <!--   END MOBILE MENU-->
 
-
+    <!-- WOMEN FASHION PART START -->
     <section class="shop-category-section">
         <div class="container-fluid">
             <div class="row">
@@ -420,6 +444,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-8 col-lg-9 col-xl-10">
                     <div class="shop-category-right py-2">
                         <div class="shop-category-head">
@@ -781,11 +806,465 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- BRAND FASHION PART START -->
+                        <div class="brand-fashion pt-5 pb-3">
+                            <h3 class="mb-2">Fashion Brand</h3>
+                            <div class="row brand-slider">
+                                <div class="col-12 col-lg-2 col-md-3 col-sm-4 slider-item mx-2">
+                                    <div class="brand-item d-flex justify-content-center">
+                                        <img class="w-100" src="assets/img/images/brand1.png" alt="brand-img">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-2 col-md-3 col-sm-4 slider-item mx-2">
+                                    <div class="brand-item d-flex justify-content-center">
+                                        <img class="w-100" src="assets/img/images/brand2.png" alt="brand-img">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-2 col-md-3 col-sm-4 slider-item mx-2">
+                                    <div class="brand-item d-flex justify-content-center">
+                                        <img class="w-100" src="assets/img/images/brand3.png" alt="brand-img">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-2 col-md-3 col-sm-4 slider-item mx-2">
+                                    <div class="brand-item d-flex justify-content-center">
+                                        <img class="w-100" src="assets/img/images/brand4.png" alt="brand-img">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-2 col-md-3 col-sm-4 slider-item mx-2">
+                                    <div class="brand-item d-flex justify-content-center">
+                                        <img class="w-100" src="assets/img/images/brand5.png" alt="brand-img">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-2 col-md-3 col-sm-4 slider-item mx-2">
+                                    <div class="brand-item d-flex justify-content-center">
+                                        <img class="w-100" src="assets/img/images/brand6.png" alt="brand-img">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-2 col-md-3 col-sm-4 slider-item mx-2">
+                                    <div class="brand-item d-flex justify-content-center">
+                                        <img class="w-100" src="assets/img/images/brand7.png" alt="brand-img">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-2 col-md-3 col-sm-4 slider-item mx-2">
+                                    <div class="brand-item d-flex justify-content-center">
+                                        <img class="w-100" src="assets/img/images/brand8.png" alt="brand-img">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-2 col-md-3 col-sm-4 slider-item mx-2">
+                                    <div class="brand-item d-flex justify-content-center">
+                                        <img class="w-100" src="assets/img/images/brand1.png" alt="brand-img">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-2 col-md-3 col-sm-4 slider-item mx-2">
+                                    <div class="brand-item d-flex justify-content-center">
+                                        <img class="w-100" src="assets/img/images/brand2.png" alt="brand-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BRAND FASHION PART END -->
+
+                        <!-- DRESS COLLECTION START -->
+                        <div class="collection-part py-4">
+                            <h3 class="mb-2">Dress Collection</h3>
+                            <div class="collection">
+                                <div class="row collection-slider">
+                                    <div class="col-lg-2 col-md-2 col-sm-6 collection-item">
+                                        <a href="#">
+                                            <img src="assets/img/products/dress1.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 collection-item">
+                                        <a href="#">
+                                            <img src="assets/img/products/dress2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 collection-item">
+                                        <a href="#">
+                                            <img src="assets/img/products/dress3.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 collection-item">
+                                        <a href="#">
+                                            <img src="assets/img/products/dress4.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 collection-item">
+                                        <a href="#">
+                                            <img src="assets/img/products/dress5.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 collection-item">
+                                        <a href="#">
+                                            <img src="assets/img/products/dress6.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 collection-item">
+                                        <a href="#">
+                                            <img src="assets/img/products/dress7.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 collection-item">
+                                        <a href="#">
+                                            <img src="assets/img/products/dress1.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- DRESS COLLECTION START -->
+
+                        <!-- BANNER PART START -->
+                        <section class="banner">
+                            <img class="w-100" src="assets/img/images/banner2.png" alt="">
+                        </section>
+                        <!-- BANNER PART END -->
+
+                        <!-- WOMEN DRESS PART START -->
+                        <h3 class="pt-5">Women Dress</h3>
+                        <div class="row women-shop-slider pb-5">
+                            <div class="col-lg-2 col-md-3 col-sm-6 shop-item">
+                                <div class="shop-box">
+                                    <div class="shop-image-box">
+                                        <img src="assets/img/products/1.png" alt="Image">
+                                        <div class="shop-image-overlay">
+                                            <div class="shop-cart-overlay">
+                                                <a href="#">
+                                                    <img src="assets/img/icon/repeat.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/love.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/shopping-cart.png" alt="">
+                                                </a>
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                    <h5 class="mt-2">Addidas</h5>
+                                    <p class="p-0">Oversized linen-blend</p>
+                                    <div class="discount mt-2">
+                                        <span>25% Discount</span>
+                                    </div>
+                                    <div class="shop-price mt-2">
+                                        <span class="price">$20.50</span>
+                                        <del class="discount-price">$20.50</del>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-6 shop-item">
+                                <div class="shop-box">
+                                    <div class="shop-image-box">
+                                        <img src="assets/img/products/2.png" alt="Image">
+                                        <div class="shop-image-overlay">
+                                            <div class="shop-cart-overlay">
+                                                <a href="#">
+                                                    <img src="assets/img/icon/repeat.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/love.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/shopping-cart.png" alt="">
+                                                </a>
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                    <h5 class="mt-2">H & M</h5>
+                                    <p class="p-0">Oversized linen-blend</p>
+                                    <div class="discount mt-2">
+                                        <span>25% Discount</span>
+                                    </div>
+                                    <div class="shop-price mt-2">
+                                        <span class="price">$20.50</span>
+                                        <del class="discount-price">$20.50</del>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-6 shop-item">
+                                <div class="shop-box">
+                                    <div class="shop-image-box">
+                                        <img src="assets/img/products/3.png" alt="Image">
+                                        <div class="shop-image-overlay">
+                                            <div class="shop-cart-overlay">
+                                                <a href="#">
+                                                    <img src="assets/img/icon/repeat.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/love.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/shopping-cart.png" alt="">
+                                                </a>
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                    <h5 class="mt-2">ZARA</h5>
+                                    <p class="p-0">Oversized linen-blend</p>
+                                    <div class="discount mt-2">
+                                        <span>25% Discount</span>
+                                    </div>
+                                    <div class="shop-price mt-2">
+                                        <span class="price">$20.50</span>
+                                        <del class="discount-price">$20.50</del>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-6 shop-item">
+                                <div class="shop-box">
+                                    <div class="shop-image-box">
+                                        <img src="assets/img/products/4.png" alt="Image">
+                                        <div class="shop-image-overlay">
+                                            <div class="shop-cart-overlay">
+                                                <a href="#">
+                                                    <img src="assets/img/icon/repeat.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/love.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/shopping-cart.png" alt="">
+                                                </a>
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                    <h5 class="mt-2">Kelvin Clin</h5>
+                                    <p class="p-0">Oversized linen-blend</p>
+                                    <div class="discount mt-2">
+                                        <span>25% Discount</span>
+                                    </div>
+                                    <div class="shop-price mt-2">
+                                        <span class="price">$20.50</span>
+                                        <del class="discount-price">$20.50</del>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-6 shop-item">
+                                <div class="shop-box">
+                                    <div class="shop-image-box">
+                                        <img src="assets/img/products/1.png" alt="Image">
+                                        <div class="shop-image-overlay">
+                                            <div class="shop-cart-overlay">
+                                                <a href="#">
+                                                    <img src="assets/img/icon/repeat.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/love.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/shopping-cart.png" alt="">
+                                                </a>
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                    <h5 class="mt-2">Robins</h5>
+                                    <p class="p-0">Oversized linen-blend</p>
+                                    <div class="discount mt-2">
+                                        <span>25% Discount</span>
+                                    </div>
+                                    <div class="shop-price mt-2">
+                                        <span class="price">$20.50</span>
+                                        <del class="discount-price">$20.50</del>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-6 shop-item">
+                                <div class="shop-box">
+                                    <div class="shop-image-box">
+                                        <img src="assets/img/products/3.png" alt="Image">
+                                        <div class="shop-image-overlay">
+                                            <div class="shop-cart-overlay">
+                                                <a href="#">
+                                                    <img src="assets/img/icon/repeat.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/love.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/shopping-cart.png" alt="">
+                                                </a>
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                    <h5 class="mt-2">H & M</h5>
+                                    <p class="p-0">Oversized linen-blend</p>
+                                    <div class="discount mt-2">
+                                        <span>25% Discount</span>
+                                    </div>
+                                    <div class="shop-price mt-2">
+                                        <span class="price">$20.50</span>
+                                        <del class="discount-price">$20.50</del>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-6 shop-item">
+                                <div class="shop-box">
+                                    <div class="shop-image-box">
+                                        <img src="assets/img/products/3.png" alt="Image">
+                                        <div class="shop-image-overlay">
+                                            <div class="shop-cart-overlay">
+                                                <a href="#">
+                                                    <img src="assets/img/icon/repeat.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/love.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/shopping-cart.png" alt="">
+                                                </a>
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                    <h5 class="mt-2">Addidas</h5>
+                                    <p class="p-0">Oversized linen-blend</p>
+                                    <div class="discount mt-2">
+                                        <span>25% Discount</span>
+                                    </div>
+                                    <div class="shop-price mt-2">
+                                        <span class="price">$20.50</span>
+                                        <del class="discount-price">$20.50</del>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-6 shop-item">
+                                <div class="shop-box">
+                                    <div class="shop-image-box">
+                                        <img src="assets/img/products/4.png" alt="Image">
+                                        <div class="shop-image-overlay">
+                                            <div class="shop-cart-overlay">
+                                                <a href="#">
+                                                    <img src="assets/img/icon/repeat.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/love.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="assets/img/icon/shopping-cart.png" alt="">
+                                                </a>
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                    <h5 class="mt-2">Addidas</h5>
+                                    <p class="p-0">Oversized linen-blend</p>
+                                    <div class="discount mt-2">
+                                        <span>25% Discount</span>
+                                    </div>
+                                    <div class="shop-price mt-2">
+                                        <span class="price">$20.50</span>
+                                        <del class="discount-price">$20.50</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- WOMEN DRESS PART END -->
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- WOMEN FASHION PART START -->
+
+    <!--    FOOTER SECTION-->
+    <footer class="pt-5">
+        <div class="container">
+            <div class="row pb-5">
+                <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-0">
+                    <div class="footer-box">
+                        <img src="assets/img/logo/logo.png" alt="Logo">
+                        <p>
+                            Address: Riadah Incubators Startup Studio And corporate factory - Khaldiya Towers - 4th
+                            Tower - Faisal Bin Turki Road -
+                            Office No. 6 - Floor 13 - Riyadh, Saudi Arab.
+                        </p>
+                        <p>
+                            +966 551175959
+                        </p>
+                        <p>info@fashionincu.com</p>
+                        <div class="social-media-footer">
+                            <div>
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-pinterest-p"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-0">
+                    <div class="footer-box">
+                        <h6>Main Menu</h6>
+    
+                        <div class="footer-menu">
+                            <a href="#">Events</a>
+                            <a href="#">Logistics & support</a>
+                            <a href="#">Product & equipment</a>
+                            <a href="#">Management</a>
+                            <a href="#">Who we are</a>
+                            <a href="#">Events & meeting</a>
+                            <a href="#">Tranning</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-0">
+                    <div class="footer-box">
+                        <h6>Importent Link</h6>
+                        <div class="footer-menu">
+                            <a href="#">Our Services</a>
+                            <a href="#">Contact us</a>
+                            <a href="#">Term & Condition</a>
+                            <a href="#">Our Business Policy</a>
+                            <a href="#">Affiliate Marketing</a>
+                            <a href="#">About our company</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-0">
+                    <div class="footer-box">
+                        <h6>Massage Us</h6>
+                        <div class="contact">
+                            <form action="">
+                                <input type="text" class="form-cntrol custom-control my-4" placeholder="Email" name="">
+                                <textarea style="height: 90px;" class="custom-control" name="" id="" cols="30"
+                                    placeholder="Type Your Massage" rows="10"></textarea>
+                                <div class="submit-btn mt-2">
+                                    <button>Submit Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="copyright-section">
+        <div class="container">
+            <div class="copyright">
+                <p>Copyright ©2020 All Rights Reserved at Fashionincu.com</p>
+            </div>
+        </div>
+    </section>
+    <!--    FOOTER SECTION END-->
 
     <!--    JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -798,6 +1277,54 @@
     <script src="assets/js/main.js"></script>
 
     <script>
+        // Collection slider here
+        $('.collection-slider').slick({
+            slidesToShow: 7,
+            slidesToScroll: 2,
+            speed: 300,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            responsive: [{
+                breakpoint: 1300,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 2,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 350,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            }
+
+            ]
+        });
+
         $('.shop_slider').slick({
             dots: false,
             infinite: false,
@@ -836,6 +1363,100 @@
             ]
         });
 
+        // Collection slider here
+        $('.women-shop-slider').slick({
+            slidesToShow: 7,
+            slidesToScroll: 2,
+            speed: 300,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            responsive: [{
+                breakpoint: 1300,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 2,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 350,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            }
+
+            ]
+        });
+        // Brand slider here
+        $('.brand-slider').slick({
+            slidesToShow: 8,
+            slidesToScroll: 2,
+            speed: 300,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            responsive: [{
+                breakpoint: 1300,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 2,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 350,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            }
+
+            ]
+        });
     </script>
 
 </body>
